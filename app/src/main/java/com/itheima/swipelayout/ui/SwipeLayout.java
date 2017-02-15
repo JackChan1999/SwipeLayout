@@ -1,7 +1,5 @@
 package com.itheima.swipelayout.ui;
 
-import com.itheima.swipelayout.util.Utils;
-
 import android.content.Context;
 import android.graphics.Rect;
 import android.support.v4.view.ViewCompat;
@@ -11,9 +9,28 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.FrameLayout;
 
+import com.itheima.swipelayout.util.Utils;
 /**
- * 侧拉删除控件
- */
+ * ============================================================
+ * Copyright：Google有限公司版权所有 (c) 2017
+ * Author：   陈冠杰
+ * Email：    815712739@qq.com
+ * GitHub：   https://github.com/JackChen1999
+ * 博客：     http://blog.csdn.net/axi295309066
+ * 微博：     AndroidDeveloper
+ * <p>
+ * Project_Name：SwipeLayout
+ * Package_Name：com.itheima.swipelayout
+ * Version：1.0
+ * time：2016/2/15 16:44
+ * des ：侧拉删除控件
+ * gitVersion：$Rev$
+ * updateAuthor：$Author$
+ * updateDate：$Date$
+ * updateDes：${TODO}
+ * ============================================================
+ **/
+
 public class SwipeLayout extends FrameLayout {
 	private Status status = Status.Close;
 	private OnSwipeLayoutListener swipeLayoutListener;
