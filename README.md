@@ -187,8 +187,8 @@ ViewDragHelper.Callback mCallback = new ViewDragHelper.Callback() {
     }
 };
 ```
- 第7-11 行需要返回一个大于0 的拖拽范围
- 第14-37 行通过mRange 分别计算前后布局的拖拽范围
+第7-11 行需要返回一个大于0 的拖拽范围
+第14-37 行通过mRange 分别计算前后布局的拖拽范围
 ## 传递拖拽事件
 初始化前后布局的位置，重写SwipeLayout 的onLayout()方法
 ```java
@@ -225,8 +225,8 @@ private Rect computeFrontRect(boolean isOpen) {
     return new Rect(left, 0, left + mWidth, mHeight);
 }
 ```
- 第2-7 行重新摆放子view 的位置
- 第8-15 行由于后布局是连接在前布局后面一起滑动的，所以可以通过前布局的位置计算后布局的位置
+第2-7 行重新摆放子view 的位置
+第8-15 行由于后布局是连接在前布局后面一起滑动的，所以可以通过前布局的位置计算后布局的位置
 前后布局在拖拽过程中互相传递变化量
 ```java
 ViewDragHelper.Callback mCallback = new ViewDragHelper.Callback() {
@@ -285,8 +285,7 @@ ViewDragHelper.Callback mCallback = new ViewDragHelper.Callback() {
     }
 };
 ```
- 第38-54 行拖拽前布局时，将前布局的变化量传递给后布局，拖拽后布局时，把后布局的变化量传递
-给前布局，这样前后布局就可以连动起来
+第38-54 行拖拽前布局时，将前布局的变化量传递给后布局，拖拽后布局时，把后布局的变化量传递给前布局，这样前后布局就可以连动起来
 # 结束动画
 ## 跳转动画
 ```java
@@ -371,7 +370,8 @@ public void open() {
     layoutContent(true);
 }
 ```
- 第55-70 行重写Callback 的onViewReleased()方法，该方法在松手后被调用，结束动画需要在此处做
+第55-70 行重写Callback 的onViewReleased()方法，该方法在松手后被调用，结束动画需要在此处做
+
 ## 平滑动画
 ```java
 public void close() {
@@ -454,8 +454,7 @@ public void setOnSwipeListener(OnSwipeListener onSwipeListener) {
     this.onSwipeListener = onSwipeListener;
 }
 ```
- 第20-23 行SwipeLayout 做为ListView 的item 时将要打开或关闭时需要通知其它item 做相应的处理，
-所以增加这两个方法
+第20-23 行SwipeLayout 做为ListView 的item 时将要打开或关闭时需要通知其它item 做相应的处理，所以增加这两个方法
 ## 更新状态及回调监听
 修改Callback 的onViewPositionChanged()方法
 ```java
@@ -479,7 +478,7 @@ public void onViewPositionChanged(View changedView, int left, int top,
     invalidate();
 }
 ```
- 第15-16 行调用更新状态及回调监听的方法
+第15-16 行调用更新状态及回调监听的方法
 dispatchDragEvent()方法
 ```java
 /**
